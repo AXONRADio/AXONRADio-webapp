@@ -33,13 +33,22 @@ new Vue({
   router,
   template: `
   <div id="app">
-    <ul>
-      <li><router-link to="/">Users</router-link></li>
-      <li><router-link to="/test">Test</router-link></li>
-      <li><router-link to="/simpleaudio">SimpleAudio</router-link></li>
-      <li><router-link to="/youtube">Youtube Player</router-link></li>
-    </ul>
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <ul>
+        <li><router-link to="/"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Users</a></router-link></li>
+        <li><router-link to="/test"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Test</a></router-link></li>
+        <li><router-link to="/simpleaudio"><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">SimpleAudio</a></router-link></li>
+        <li><router-link to="/youtube"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Youtube Player</a></router-link></li>
+      </ul>
+    </div>
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+    </div>
+
     <router-view></router-view>
   </div>
   `
-}).$mount('#app')
+}).$mount("#app");

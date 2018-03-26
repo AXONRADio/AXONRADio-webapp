@@ -1,5 +1,9 @@
 <template>
-  <div class="test">
+
+  <div class="container-fluid">
+    <div class="test">
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
       <input type="text" v-model="title"><br/>
 
       <h1>{{title}}</h1>
@@ -23,6 +27,9 @@
 
       <h3>{{fullName}}</h3>
       <h2>{{msg}}</h2>
+      </div>
+      </div>
+      </div>
   </div>
 </template>
 
