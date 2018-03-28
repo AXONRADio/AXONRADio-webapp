@@ -19,10 +19,8 @@ const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [
-    {path:'/', component: Users},
-    {path: '/test', component: Test},
-    {path:'/simpleaudio', component: SimpleAudio},
-    {path:'/youtube', component:youtubeembed}
+    {path:'/', component: youtubeembed},
+    {path: '/mp3', component: SimpleAudio}
   ]
 })
 
@@ -35,10 +33,11 @@ new Vue({
   <div id="app">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <ul>
-        <li><router-link to="/"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Users</a></router-link></li>
-        <li><router-link to="/test"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Test</a></router-link></li>
-        <li><router-link to="/simpleaudio"><a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">SimpleAudio</a></router-link></li>
-        <li><router-link to="/youtube"><a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Youtube Player</a></router-link></li>
+        <li><router-link to="/"><a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a></router-link></li>
+        <li><router-link to="/mp3"><a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">MP3 Player</a></router-link></li>
+        <li><a href="http://localhost:4000">Login</a></li>
+        <li><a href="http://localhost:4000/logout">Logout</a></li>
+        <li><a href="http://localhost:4000/profile">My Profile</a></li>
       </ul>
     </div>
     <div class="tab-content" id="v-pills-tabContent">
@@ -47,7 +46,9 @@ new Vue({
       <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
       <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
     </div>
-
+    <div>
+      <h1>AXONRADiO</h1>
+    </div>
     <router-view></router-view>
   </div>
   `

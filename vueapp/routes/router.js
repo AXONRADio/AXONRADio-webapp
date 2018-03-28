@@ -78,7 +78,7 @@ router.get('/profile', function (req, res, next) {
 });
 
 router.get('/home', function(req, res, next){
-  return res.redirect('http://localhost:8001');
+  return res.redirect('http://localhost:8000');
 });
 // GET for logout logout
 router.get('/logout', function (req, res, next) {
