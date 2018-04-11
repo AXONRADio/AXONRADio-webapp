@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
 import VueYoutubeEmbed from 'vue-youtube-embed'
 import App from './App'
+import InstantSearch from "vue-instantsearch";
 
 import SimpleAudio from './components/SimpleAudio'
 import youtubeembed from './components/YoutubeEmbedded.vue'
@@ -12,6 +13,7 @@ import youtubeembed from './components/YoutubeEmbedded.vue'
 Vue.use(vueResource)
 Vue.use(VueRouter)
 Vue.use(VueYoutubeEmbed)
+Vue.use(InstantSearch)
 
 const router = new VueRouter({
   mode: 'history',

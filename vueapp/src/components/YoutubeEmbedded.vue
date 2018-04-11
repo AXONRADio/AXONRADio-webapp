@@ -1,7 +1,7 @@
 <template>
     <div class="youtubeembedded">
         <section>
-            <youtube :video-id="videoId" @ready="ready" @playing="playing"></youtube>
+          <youtube :video-id="videoId" @ready="ready" @playing="playing"></youtube>
         </section>
     </div>
 </template>
